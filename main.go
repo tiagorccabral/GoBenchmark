@@ -15,6 +15,7 @@ func main() {
 	CallClear()
 
 	PrintSystemInfo()
+	PrintMemUsage()
 
 	fmt.Println("\n\nPress enter to begin tests >")
 	buf := bufio.NewReader(os.Stdin)
@@ -23,6 +24,8 @@ func main() {
 	start := time.Now()
 
 	RunFpBenchmark(100)
+
+	PrintMemUsage()
 
 	timeOfExecution := time.Since(start)
 
