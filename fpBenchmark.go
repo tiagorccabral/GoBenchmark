@@ -30,7 +30,7 @@ func fpBenchmark(i int) {
 
 	// division of floating point numbers
 	for i := 0; i < sizeOfSlice; i++ {
-		results[i] = results[i] / ((rand.Float64() + 1) * (eulerNum / pi))
+		results[i] = results[i] / ((rand.Float64() + 1) * (eulerNum / ((pi * pi * pi) / eulerNum )))
 	}
 
 	waitGroup.Done()

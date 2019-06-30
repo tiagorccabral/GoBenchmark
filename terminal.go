@@ -28,8 +28,8 @@ func init() {
 	}
 }
 
-// CallClear will clear screen on Windows, mac or unix systems
-func CallClear() {
+// ClearScreen will clear screen on Windows, mac or unix systems
+func ClearScreen() {
 	value, ok := clear[runtime.GOOS] //runtime.GOOS -> linux, windows, darwin etc.
 	if ok {                          //if we defined a clear func for that platform:
 		value() //we execute it

@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	CallClear()
+	ClearScreen()
 
 	PrintSystemInfo()
 	PrintMemUsage()
