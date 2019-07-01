@@ -9,7 +9,7 @@ import (
 
 var waitGroup sync.WaitGroup
 
-const sizeOfSlice = 10000
+const sizeOfSlice = 500000
 const pi float64 = 3.141592653589793238462643
 const eulerNum float64 = 2.718281828459045235360287
 
@@ -30,7 +30,7 @@ func fpBenchmark(i int) {
 
 	// division of floating point numbers
 	for i := 0; i < sizeOfSlice; i++ {
-		results[i] = results[i] / ((rand.Float64() + 1) * (eulerNum / ((pi * pi * pi) / eulerNum )))
+		results[i] = results[i] / ((rand.Float64() + 1) * (eulerNum / ((pi * pi * pi) / eulerNum)))
 	}
 
 	waitGroup.Done()
