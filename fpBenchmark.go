@@ -1,11 +1,5 @@
 package main
 
-import (
-	"sync"
-)
-
-var waitGroup sync.WaitGroup
-
 const sizeOfSlice = 1000000
 const pi float64 = 3.141592653589793238462643
 const eulerNum float64 = 2.718281828459045235360287

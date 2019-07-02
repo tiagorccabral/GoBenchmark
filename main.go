@@ -8,8 +8,11 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sync"
 	"time"
 )
+
+var waitGroup sync.WaitGroup
 
 func main() {
 	ClearScreen()
