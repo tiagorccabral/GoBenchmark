@@ -21,15 +21,25 @@ func benchmarkSort(amountOfThreads int, sizeOfSlice int, b *testing.B) {
 	}
 }
 
-func BenchmarkFpBenchmark1(b *testing.B) { benchmarkFP(1, b) }
-func BenchmarkFpBenchmark2(b *testing.B) { benchmarkFP(10, b) }
-func BenchmarkFpBenchmark3(b *testing.B) { benchmarkFP(100, b) }
-func BenchmarkFpBenchmark4(b *testing.B) { benchmarkFP(1000, b) }
-func BenchmarkSort1(b *testing.B)        { benchmarkSort(1, 100, b) }
-func BenchmarkSort2(b *testing.B)        { benchmarkSort(1, 1000, b) }
-func BenchmarkSort3(b *testing.B)        { benchmarkSort(1, 10000, b) }
-func BenchmarkSort4(b *testing.B)        { benchmarkSort(1, 100000, b) }
-func BenchmarkSort5(b *testing.B)        { benchmarkSort(10, 100000, b) }
+func benchmarkStringConcat(amountOfThreads int, sizeOfSlice int, b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		RunStringConcat(amountOfThreads, sizeOfSlice)
+	}
+}
+
+func BenchmarkFpBenchmark1(b *testing.B)  { benchmarkFP(1, b) }
+func BenchmarkFpBenchmark2(b *testing.B)  { benchmarkFP(10, b) }
+func BenchmarkFpBenchmark3(b *testing.B)  { benchmarkFP(100, b) }
+func BenchmarkFpBenchmark4(b *testing.B)  { benchmarkFP(1000, b) }
+func BenchmarkSort1(b *testing.B)         { benchmarkSort(1, 100, b) }
+func BenchmarkSort2(b *testing.B)         { benchmarkSort(1, 1000, b) }
+func BenchmarkSort3(b *testing.B)         { benchmarkSort(1, 10000, b) }
+func BenchmarkSort4(b *testing.B)         { benchmarkSort(10, 10000, b) }
+func BenchmarkSort5(b *testing.B)         { benchmarkSort(100, 100000, b) }
+func BenchmarkStringConcat1(b *testing.B) { benchmarkStringConcat(1, 1000, b) }
+func BenchmarkStringConcat2(b *testing.B) { benchmarkStringConcat(1, 10000, b) }
+func BenchmarkStringConcat3(b *testing.B) { benchmarkStringConcat(1, 100000, b) }
+func BenchmarkStringConcat5(b *testing.B) { benchmarkStringConcat(1, 1000000, b) }
 
 func TestMain(m *testing.M) {
 	ClearScreen()
