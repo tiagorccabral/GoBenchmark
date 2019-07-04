@@ -1,14 +1,13 @@
 package main
 
 import (
-	"math/rand"
 	"sort"
 )
 
 func generateSlice(n int) []int {
 	s := make([]int, 0, n)
 	for i := 0; i < n; i++ {
-		s = append(s, rand.Intn(1e9))
+		s = append(s, n)
 	}
 	return s
 }
