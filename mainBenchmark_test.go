@@ -39,7 +39,7 @@ func BenchmarkSort5(b *testing.B)         { benchmarkSort(100, 100000, b) }
 func BenchmarkStringConcat1(b *testing.B) { benchmarkStringConcat(1, 1000, b) }
 func BenchmarkStringConcat2(b *testing.B) { benchmarkStringConcat(1, 10000, b) }
 func BenchmarkStringConcat3(b *testing.B) { benchmarkStringConcat(1, 100000, b) }
-func BenchmarkStringConcat5(b *testing.B) { benchmarkStringConcat(1, 1000000, b) }
+func BenchmarkStringConcat4(b *testing.B) { benchmarkStringConcat(100, 100000, b) }
 
 func TestMain(m *testing.M) {
 	ClearScreen()
